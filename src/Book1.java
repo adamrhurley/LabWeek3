@@ -1,12 +1,17 @@
 import javax.swing.*;
 public class Book1 {
     public static void main(String[] args) {
-        Book Book1 = new Book();
-        Book Book2 = new Book();
+        Book book1 = new Book();
+        Book book2 = new Book();
 
-        String title1, title2, isbn1, isbn2, price1AsString, price2AsString, page1AsString, page2AsString;
+        String title1, title2, isbn1, isbn2, price1AsString, price2AsString, page1AsString, page2AsString, book1NumAsString, book2NumAsString;
         double price1, price2;
-        int page1, page2;
+        int page1, page2, book1Num, book2Num;
+
+        book1NumAsString = JOptionPane.showInputDialog("Please enter the book number: ");
+        book1Num = Integer.parseInt(book1NumAsString);
+
+
 
         title1= JOptionPane.showInputDialog("Please Enter the first book's title: ");
 
@@ -18,6 +23,8 @@ public class Book1 {
 
         isbn1 = JOptionPane.showInputDialog("Please Enter the first book's isbn: ");
 
+        book2NumAsString = JOptionPane.showInputDialog("Please enter the book number: ");
+        book2Num = Integer.parseInt(book2NumAsString);
 
         title2= JOptionPane.showInputDialog("Please Enter the second book's title: ");
 
@@ -31,19 +38,19 @@ public class Book1 {
 
 
 
+        book1.setBookNum(book1Num);
+        book1.setTitle(title1);
+        book1.setPrice(price1);
+        book1.setNumPages(page1);
+        book1.setIsbn(isbn1);
 
-        Book1.setTitle(title1);
-        Book1.setPrice(price1);
-        Book1.setNumPages(page1);
-        Book1.setIsbn(isbn1);
+        book2.setBookNum(book2Num);
+        book2.setTitle(title2);
+        book2.setPrice(price2);
+        book2.setNumPages(page2);
+        book2.setIsbn(isbn2);
 
-        Book2.setTitle(title2);
-        Book2.setPrice(price2);
-        Book2.setNumPages(page2);
-        Book2.setIsbn(isbn2);
-
-        JOptionPane.showMessageDialog(null,"Book 1\nBook Title: " + Book1.getTitle() + "\nBook Price: " + Book1.getPrice() + "\nNumber Of Pages: " + Book1.getNumPages() + "\nISBN: " + Book1.getIsbn() + "\n\nBook 2\nBook Title: " + Book2.getTitle() + "\nBook Price: " + Book2.getPrice() + "\nNumber Of Pages: " + Book2.getNumPages() + "\nISBN: " + Book2.getIsbn());
-    }
+         JOptionPane.showMessageDialog(null,book1.toString() + book2.toString());}
 }
 
 

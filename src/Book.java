@@ -1,4 +1,5 @@
 public class Book {
+    private int bookNum;
     private String title;
     private int numPages;
     private String isbn;
@@ -12,6 +13,12 @@ public class Book {
     }
 
     //mutator method
+
+
+    public void setBookNum(int bookNum) { this.bookNum = bookNum; }
+
+    public int getBookNum() {return bookNum;}
+
     public void setTitle(String title) {
         this.title = title;
     }
@@ -38,5 +45,12 @@ public class Book {
 
     public String getIsbn() {
         return isbn;
+    }
+
+     @Override
+    public String toString() {
+        return "\n\nBook "+ bookNum + "\nBook Title: " + title +
+                "\nBook Price: " + price + "\nNumber Of Pages: " + numPages +
+                "\nISBN: " + isbn;
     }
 }
