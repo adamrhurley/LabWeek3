@@ -32,7 +32,7 @@ public class Animal {
         return continent;
     }
 
-    private double getWeigth() {
+    private double getWeight() {
         return weight;
     }
 
@@ -63,7 +63,7 @@ public class Animal {
                 "\nWeight: " + weight + "\nAge: " + age;*/
 
         return "Type: " + getType() + "\nContinent: " + getContinent() +
-                "\nWeight: " + getWeigth() + "\nAge: " + getAge();
+                "\nWeight: " + getWeight() + "\nAge: " + getAge();
 
 
     }
