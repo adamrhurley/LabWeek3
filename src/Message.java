@@ -4,13 +4,17 @@ public class Message {
         private String sender;
 
 
-        public Message(String sender, String recipient){
+        public Message(String sender, String recipient, String message){
             setSender(sender);
-            setRecipient(recipient);}
+            setRecipient(recipient);
+            setMessage(message);
+        }
+
+    private void setMessage(String message) {this.message = message;
+    }
 
 
-
-    private void setRecipient() {this.recipient = recipient;}
+    private void setRecipient(String recipient) {this.recipient = recipient;}
 
     private void setSender(String sender) {this.sender = sender;}
 
@@ -19,7 +23,7 @@ public class Message {
     @Override
     public String toString() {
         //returjning object state directly via attributes
-        return "\n\nSender "+ sender + "\nRecipent " + recipient +
+        return "\n\nSender: "+ sender + "\nRecipent: " + recipient +
                 "\n" + message;
        // public String getMessage(){return message;}
         //public void setMessage(String message) { this.message = message;}
