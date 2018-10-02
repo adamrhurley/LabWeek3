@@ -1,10 +1,12 @@
 public class Animal {
     private String type;
-    private String continent;
+    public String continent;
     private double weight;
     private int age;
     private String [] continents = new String[]{"Europe", "Africa", "Asia"};
 
+    for(int i = 0; i < continents.length; i++){
+    continents[i] += continent;}
 
     Animal() {
         this.type = "No Type Specified";
