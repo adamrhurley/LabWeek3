@@ -3,11 +3,29 @@ public class Message {
         private String recipient;
         private String sender;
 
-        public String getMessage(){return message;}
-        public void setMessage(String message) { this.message = message;}
+
+        public Message(String sender, String recipient){
+            setSender(sender);
+            setRecipient(recipient);}
+
+
+
+    private void setRecipient() {this.recipient = recipient;}
+
+    private void setSender(String sender) {this.sender = sender;}
+
+
 
     @Override
     public String toString() {
-        return "Message: " + message;
-    }}
+        //returjning object state directly via attributes
+        return "\n\nSender "+ sender + "\nRecipent " + recipient +
+                "\n" + message;
+       // public String getMessage(){return message;}
+        //public void setMessage(String message) { this.message = message;}
+
+   // @Override
+    //public String toString() {
+//        return "Message: " + message;}
+}}
 
