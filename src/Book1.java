@@ -6,9 +6,9 @@ public class Book1 {
         JOptionPane.showMessageDialog(null, "Book 1 values: \n\n" + book1.toString());
 
 
-        String title1, title2, isbn1, isbn2, price1AsString, price2AsString, page1AsString, page2AsString, book1NumAsString, book2NumAsString;
-        double price1, price2;
-        int page1, page2, book1Num, book2Num;
+       // String title1, title2, isbn1, isbn2, price1AsString, price2AsString, page1AsString, page2AsString, book1NumAsString, book2NumAsString;
+        //double price1, price2;
+        //int page1, page2, book1Num, book2Num;
 
        /* book1NumAsString = JOptionPane.showInputDialog("Please enter the book number: ");
         book1Num = Integer.parseInt(book1NumAsString);

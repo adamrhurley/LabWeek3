@@ -8,7 +8,7 @@ public class Book {
 
     //constructor (no-arg)
 
-    public Book()
+    Book()
     {
         this.title = "No title";
         this.numPages = 0;
@@ -16,9 +16,9 @@ public class Book {
         this.price = 0.0;
     }
 
-    public Book(String title,int numPages,String isbn,double price)
+    Book(String title, int numPages, String isbn, double price)
     {
-        setTitle(title);//mutators are called here to initialise attributes
+        setTitle(title);//mutator are called here to initialise attributes
         setNumPages(numPages);
         setIsbn(isbn);
         setPrice(price);
@@ -31,18 +31,18 @@ public class Book {
 // accessor and mutator methods
 
     // accessor method
-    public String getTitle() {
+    String getTitle() {
         return title;
     }
 
     //mutator method
 
 
-    public void setBookNum(int bookNum) { this.bookNum = bookNum; }
+   // public void setBookNum(int bookNum) { this.bookNum = bookNum; }
 
-    public int getBookNum() {return bookNum;}
+    //public int getBookNum() {return bookNum;}
 
-    public void setTitle(String title) {
+    private void setTitle(String title) {
         this.title = title;
     }
 
@@ -72,7 +72,7 @@ public class Book {
 
      @Override
     public String toString() {
-        //returjning object state directly via attributes
+        //returning object state directly via attributes
        return "\n\nBook "+ bookNum + "\nBook Title: " + title +
                 "\nBook Price: " + price + "\nNumber Of Pages: " + numPages +
                 "\nISBN: " + isbn;
