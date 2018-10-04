@@ -1,105 +1,75 @@
 public class Animal {
     private String type;
-    public String continent;
+    private String[] continents;
     private double weight;
     private int age;
-    //private String[] = continents
- //private String [] continents;
-   // private String continentsString = continents.toString();
 
-   // for(int i = 0; i < continents.length; i++){
-    //continents[i] += continent;}
-
-   public String continentsString(String[] continents){
-
-       String results = "[";
-       for (int i = 0; i < continents.length; i++) {
-
-           results += continents[i];
-        }return results;}
-
-    Animal() {
+    public Animal() {
         this.type = "No Type Specified";
-        //this.continent = null;
         this.weight = 0.0;
         this.age = 0;
-        this.continent = null;
+        this.continents = null;
     }
 
-    Animal(String type, String continent, double weight, int age) {
+    public Animal(String type, String[] continents, double weight, int age) {
         setType(type);
-        setContinent(continent);
+        setContinents(continents);
         setWeight(weight);
         setAge(age);
-       // this.continents = continentsString;
-       // setContinentsString(continentsString);
-        this.type = type;
-        this.continent = continent;
-        this.weight = weight;
-        this.age = age;
-        //this.continentsString = setContinentsString();
-        //continents = new String[]{"Europe", "Africa", "Asia"};
+
     }
 
-
-
-
-
-
-    private String getType() {
+    public String getType() {
         return type;
     }
 
-   private String getContinent() {
-       return continent;
-   }
-
-    private double getWeight() {
+    public double getWeight() {
         return weight;
     }
 
-    private int getAge() {
+    public int getAge() {
         return age;
     }
 
-   // private String getContinentsString(){
-     //   return continentsString;
-    //}
 
 
-
-
-
-    private void setType(String type) {
+    public void setType(String type) {
         this.type = type;
     }
 
-    private void setContinent(String continent) {
-    this.continent = continent;
+    public void setContinents(String[] continents) {
+        this.continents = continents;
     }
 
-    private void setWeight(double weight) {
+    public void setWeight(double weight) {
         this.weight = weight;
     }
 
-    private void setAge(int age) {
+    public void setAge(int age) {
         this.age = age;
     }
 
-   // private void setContinentsString(String continentsString) {
-    //    this.continentsString = continentsString;
-   // }
-
-
     @Override
     public String toString() {
-       /* return "Type: " + type + "\nContinent: " + continent +
-                "\nWeight: " + weight + "\nAge: " + age;*/
 
-        return "Type: " + getType()  + "\nContinent: " + getContinent()+
+       String conts="";
+
+       if(continents==null)
+       {
+           conts = "No continents specified";
+       }
+       else
+       {
+           for (int i = 0; i < continents.length; i++) {
+
+               conts += continents[i] + " ";
+           }
+
+       }
+
+        return "Type: " + getType()  + "\nContinent: " + conts +
                 "\nWeight: " + getWeight() + "\nAge: " + getAge() /*+ "\nContinents: " +continentsString/*.continents*/;
 
 
     }
 }
-

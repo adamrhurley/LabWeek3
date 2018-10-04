@@ -5,7 +5,7 @@ public class Animal1 {
         Animal animal = new Animal();
         String[] continents = new String[]{"Europe", "Africa", "Asia"};
 
-        Animal animal1 = new Animal("Aquatic","Europe", 20.6, 17);
+        Animal animal1 = new Animal("Aquatic",continents, 20.6, 17);
 
         JOptionPane.showMessageDialog(null, "Animal Details: \n\n" + animal.toString());
 
