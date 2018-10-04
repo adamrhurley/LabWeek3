@@ -16,13 +16,13 @@ public class MyPoint {
 
 
 
-    public int getxVal() {
-        return xVal;
-    }
+    //public int getxVal() {
+   //     return xVal;
+   // }
 
-    public int getyVal() {
-        return yVal;
-    }
+    //public int getyVal() {
+    //    return yVal;
+   // }
 
 
 
@@ -65,9 +65,4 @@ public class MyPoint {
     public String toString() {
         return xVal+","+yVal ;
     }
-
-
-
-
-
 }
