@@ -3,7 +3,8 @@ public class Animal {
     public String continent;
     private double weight;
     private int age;
- //   private String [] continents;
+    //private String[] = continents
+ //private String [] continents;
    // private String continentsString = continents.toString();
 
    // for(int i = 0; i < continents.length; i++){
@@ -11,15 +12,11 @@ public class Animal {
 
    public String continentsString(String[] continents){
 
-       String result = "[";
+       String results = "[";
        for (int i = 0; i < continents.length; i++) {
-               result = result + ",";
 
-           String item = continents[i];
-           result = result + item;
-       }
-       result = result + "]";
-       return result; }
+           results += continents[i];
+        }return results;}
 
     Animal() {
         this.type = "No Type Specified";
